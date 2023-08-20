@@ -1,13 +1,18 @@
 import requests
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 print("[1]Exercise 1")
 print("[2]Exercise 2")
 method = input("Please choose a mode: ")
-print()
+clear_screen()
 print("[1]Text mode")
 print("[2]Gui mode")
 istext = input("Please choose a mode: ")
-
+clear_screen()
+print("Innitializing...")
 if int(method) == 1 and int(istext) == 1:
     print("\nTrying getting Exercise 1 in text mode...")
     exec(requests.get("https://raw.githubusercontent.com/AlexPhamNgoQuoc/appbasicbuoi1/main/gitfile/gui-text.py").text)
